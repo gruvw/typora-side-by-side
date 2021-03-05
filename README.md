@@ -8,7 +8,9 @@ I made this because I thought it was lacking in Typora and it was mentioned a lo
 
 ## Screenshots
 
-no screenshots for the moment
+Math environment (theme [Panda](https://github.com/gilbertohasnofb/typora-panda-theme)):
+![Screenshot from 2021-03-05 09-47-38](https://user-images.githubusercontent.com/63407038/110090865-1245d700-7d98-11eb-97d1-fc95ae0c60a4.png)
+
 
 ## Installation
 
