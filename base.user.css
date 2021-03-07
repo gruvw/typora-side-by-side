@@ -1,47 +1,88 @@
 /* Typora side-by-side theme extension made by gruvw */
 
-/* Math display side by side */
+
+/* Math display side-by-side */
 div.mathjax-block.md-rawblock-on-edit .md-rawblock-tooltip {
-	right: -10%;
+  right: -10%;
 }
 
 div.mathjax-block.md-rawblock-on-edit .md-rawblock-panel {
-	display: grid;
-	grid-template-columns:  55% 45%;  /* edit for proportions between code and rendering*/
-	grid-template-rows: auto auto auto;
-	margin: 0 -10%;  /* edit this value to enlarge the math edition width */
-	background-color: var(--rawblock-edit-panel-bd);  /* edition panel background color */
+  display: grid;
+  grid-template-columns:  55% 45%;  /* edit for proportions between code and rendering*/
+  grid-template-rows: auto auto auto;
+  margin: 0 -10%;  /* edit this value to enlarge the math edition width */
+  background-color: var(--rawblock-edit-panel-bd);  /* edition panel background color */
 }
 
 div.mathjax-block.md-rawblock-on-edit .md-rawblock-panel .md-rawblock-before {
-	grid-row-start: 1;
-	overflow-x: scroll;
-}
-
-div.mathjax-block.md-rawblock-on-edit .md-rawblock-panel .md-rawblock-after {
-	grid-row-start: 3;
-	overflow-x: scroll;
+  grid-row-start: 1;
+  overflow-x: scroll;
 }
 
 div.mathjax-block.md-rawblock-on-edit .md-rawblock-panel .md-rawblock-input {
-	grid-column-start: 1;
-	grid-row-start: 2;
-	border-right: 1px solid var(--text-color);  /* vertical separation bar color */
+  grid-column-start: 1;
+  grid-row-start: 2;
+  border-right: 1px solid var(--text-color);  /* vertical separation bar color */
+}
+
+div.mathjax-block.md-rawblock-on-edit .md-rawblock-panel .md-rawblock-after {
+  grid-row-start: 3;
+  overflow-x: scroll;
 }
 
 div.mathjax-block.md-rawblock-on-edit .md-rawblock-panel .code-tooltip {
-	grid-column-start: 2;
-	grid-row-start: 2;
-	display: grid;
-	box-shadow: none;
-	align-items: center;
-	margin: 0 10px;
-	overflow-x: scroll;
-	overflow-y: hidden;
-	border: none;
-	background-color: var(--rawblock-edit-panel-bd);  /* edition panel background color */
+  grid-column-start: 2;
+  grid-row-start: 2;
+  display: grid;
+  box-shadow: none;
+  align-items: center;
+  margin: 0 10px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  border: none;
+  background-color: var(--rawblock-edit-panel-bd);  /* edition panel background color */
 }
 
 div.mathjax-block.md-rawblock-on-edit .md-rawblock-panel .code-tooltip .mathjax-candidate {
-	overflow: unset;
+  overflow: unset;
+}
+
+
+/* Mermaid display side-by-side */
+pre.md-fences.md-diagram.ty-contain-cm.modeLoaded.md-focus {
+  display: grid;
+  grid-template-columns:  40% 60%;  /* edit for proportions between code and rendering*/
+  grid-template-rows: min-content;
+  margin: 0 -10%;  /* edit this value to enlarge the math edition width */
+  background-color: var(--bg-color-1);
+  margin-bottom: 2.3em !important;
+  padding: 0 0;
+  box-shadow: none;
+  border-radius: unset;
+}
+
+pre.md-fences.md-diagram.ty-contain-cm.modeLoaded.md-focus .CodeMirror {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  background-color: var(--rawblock-edit-panel-bd);  /* edition panel background color */
+  padding: 8px 4px 8px 4px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+
+pre.md-fences.md-diagram.ty-contain-cm.modeLoaded.md-focus .md-diagram-panel {
+  position: unset;
+  grid-column-start: 2;
+  grid-row-start: 1;
+  display: grid;
+  box-shadow: none;
+  align-items: center;
+  margin: 0 10px;
+  overflow-x: scroll;
+  border: none;
+}
+
+pre.md-fences.md-diagram.ty-contain-cm.modeLoaded.md-focus .code-tooltip {
+  right: 60%;  /* edit to match proportions between code and rendering*/
+  bottom: -2em;
 }

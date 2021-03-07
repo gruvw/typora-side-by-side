@@ -22,11 +22,12 @@ Name the css file:
 * **base.user.css** if you want it to be applied by default on top of all your themes
 * **\<theme-name>.user.css** if you want it to be applied only on top of a particular theme
 
-⚠️ If this file already exists, append the content of the _base.user.css_ at the end of it!
+⚠️ If this file already exists, append the content of _\_.user.css_ at the end of it!
 
 ## Currently supported blocks
 
 - Math blocks (\$\$)
+- (Mermaid in progress)
 
 ## Themes compatibility
 
@@ -39,7 +40,7 @@ Compatibility tested with following Typora themes:
 - Night
 - Nord
 - Onedark
-- Panda (built on top of this theme initially)
+- Panda (initially built on top of this theme)
 - Pixyll
 - Quartz Milky
 - Whitey
