@@ -49,7 +49,7 @@ div.mathjax-block.md-rawblock-on-edit .md-rawblock-panel .code-tooltip .mathjax-
 
 
 /* Mermaid display side-by-side */
-pre.md-fences.md-diagram.ty-contain-cm.modeLoaded.md-focus {
+pre.md-fences.md-diagram.ty-contain-cm.modeLoaded.md-focus:not([mermaid-type="gantt"]) {
   display: grid;
   grid-template-columns:  40% 60%;  /* edit for proportions between code and rendering*/
   grid-template-rows: min-content;
@@ -61,7 +61,7 @@ pre.md-fences.md-diagram.ty-contain-cm.modeLoaded.md-focus {
   border-radius: unset;
 }
 
-pre.md-fences.md-diagram.ty-contain-cm.modeLoaded.md-focus .CodeMirror {
+pre.md-fences.md-diagram.ty-contain-cm.modeLoaded.md-focus:not([mermaid-type="gantt"]) .CodeMirror {
   grid-column-start: 1;
   grid-row-start: 1;
   background-color: var(--rawblock-edit-panel-bd);  /* edition panel background color */
@@ -70,7 +70,7 @@ pre.md-fences.md-diagram.ty-contain-cm.modeLoaded.md-focus .CodeMirror {
   border-radius: 6px;
 }
 
-pre.md-fences.md-diagram.ty-contain-cm.modeLoaded.md-focus .md-diagram-panel {
+pre.md-fences.md-diagram.ty-contain-cm.modeLoaded.md-focus:not([mermaid-type="gantt"]) .md-diagram-panel {
   position: unset;
   grid-column-start: 2;
   grid-row-start: 1;
@@ -82,7 +82,12 @@ pre.md-fences.md-diagram.ty-contain-cm.modeLoaded.md-focus .md-diagram-panel {
   border: none;
 }
 
-pre.md-fences.md-diagram.ty-contain-cm.modeLoaded.md-focus .code-tooltip {
+pre.md-fences.md-diagram.ty-contain-cm.modeLoaded.md-focus:not([mermaid-type="gantt"]) .code-tooltip {
   right: 60%;  /* edit to match proportions between code and rendering*/
   bottom: -2em;
+}
+
+/* fixes line number overlapping bug */
+pre.md-fences.md-diagram.ty-contain-cm.modeLoaded.md-focus:not([mermaid-type="gantt"]) .CodeMirror div.CodeMirror-scroll div.CodeMirror-sizer {
+  /* margin-left: 27px !important; */
 }

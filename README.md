@@ -15,19 +15,22 @@ Math environment (theme [Panda](https://github.com/gilbertohasnofb/typora-panda-
 ## Installation
 
 You can refer to [Typora custom CSS](https://support.typora.io/Add-Custom-CSS/) documentation page in order to add this custom css to your editor.
-Everything that you need is in the _base.user.css_ file.
+Everything that you need is in the _\_.user.css_ file.
+You can find this file in the [Releases](https://github.com/gruvw/typora-side-by-side/releases) tab of this repository.
 
 Name the css file:
 
 * **base.user.css** if you want it to be applied by default on top of all your themes
 * **\<theme-name>.user.css** if you want it to be applied only on top of a particular theme
 
-⚠️ If this file already exists, append the content of _\_.user.css_ at the end of it!
+and place it inside the Typora _themes_ directory (see [Typora theme documentation](https://theme.typora.io/doc/Install-Theme/)).
+
+⚠️ If the file already exists, append the content of _\_.user.css_ at the end of it!
 
 ## Currently supported blocks
 
 - Math blocks (\$\$)
-- (Mermaid in progress)
+- (Mermaid in development)
 
 ## Themes compatibility
 
